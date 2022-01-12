@@ -1,0 +1,15 @@
+#Servidor
+#remote.connection.default.host=10.2.73.204
+
+#LOCALHOST
+remote.connection.default.host=localhost
+
+#Jboss test - SOLARIS
+#remote.connection.default.host=10.2.73.217
+
+remote.connection.default.port=4447
+remote.connection.default.username=ejbuser
+remote.connection.default.password=brq@1234
+remote.connectionprovider.create.options.org.xnio.Options.SSL_ENABLED=false
+remote.connections=default
+remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMOUS=false
