@@ -1,0 +1,200 @@
+SIPNC
+
+- Salvar o arquivo "sipnc-frontend.zip" na pasta \tmp (no servidor 10.116.98.56 - spdeaprlx090);
+- Acessar o caminho  /opt/apache/jbcs-httpd24-2.4/httpd/htdocs/sipnc;
+- Apagar todo o conteúdo da pasta, com  o comando sudo -u apache rm -rvf *;
+- Voltar à pasta \tmp;
+- Descompactar o zip, com o conando sudo -u apache unzip -d /opt/apache/jbcs-httpd24-2.4/httpd/htdocs/sipnc sipnc-frontend.zip;
+- Não é necessário dar stop/start;
+- É necessário ter acesso ao usuário "apache" no servidor.
+
+===================================================
+NOVOS SERVIDORES
+====================================================
+ 
+Jboss Domain:    SSPDEAPLLX0042   10.116.88.114   (os deploys deverão ser realizados neste servidor) - permissão de deploy e undeploy - jboss6 não precisa informar a instancia - igual ao LX015
+Jboss Instâncias: SSPDEAPLLX0033   10.116.88.90     (servidor onde estão as instâncias) - permissão de stop/start - jboss6 - igual ao L
+ 
+bastian sdegerenlx0003 - 10.116.76.25 //comando ssh nome ou o ip do servidor - os acessos devem ser a partir deste servidor
+ 
+Nomes das instâncias:
+ si
+==================================================================================================================================================================================
+ 
+AMBIENTE 1  -VERSÃO 3.0.70.04
+ 
+//DEPLOY JBOSS
+cxextrlx015: sipan201                                         - sipan02-lx0033 – grupo sipan02        sspdeapllx0033 (IP 10.116.88.90 porta 39002)
+ 
+//PORTAL APLICAÇÃO
+cxextrlx201                                                     - sspdeapllx0069 (IP 10.116.88.137 porta 9044) - executar stop/start com o usuário wpsadmin - igual ao LX201
+ 
+//PORTAL APRESENTAÇÃO
+sspdeaprlx0002: 10.116.84.117                                    - sspdeapllx0069 (webserver 2 porta 443) - acesso para leitura de logs /opt/ibm/httpserver*/log
+ 
+==================================================================================================================================================================================
+ 
+AMBIENTE 2 (VERSÃO 3.0.69.11) AMBIENTE 3 (FEIRÃO) (VERSÃO 3.0.67.15)
+ 
+//INSTÃNCIAS JBOSS
+cxextrlx015: sipan200                                            - sipan01-lx0033 – grupo sipan01        sspdeapllx0033 (IP 10.116.88.90 porta 39001)
+cxextrlx015: sipan202 (FEIRÃO)                                   - sipan03-lx0033 – grupo sipan03        sspdeapllx0033 (IP 10.116.88.90 porta 39003)
+ 
+//PORTAL APLICAÇÃO
+cxextrlx200   (portal)                                          - sspdeapllx0008 (IP 10.116.88.65 porta 9044) - executar stop/start com o usuário wpsadmin - igual ao LX200
+ 
+//PORTAL APRESENTAÇÃO
+spdeaprlx0002: 10.116.84.116                                     - sspdeapllx0008 (webserver 1 porta 443) - acesso para leitura de logs /opt/ibm/httpserver*/log
+sspdeaprlx0002: 10.116.84.118                                    - sspdeapllx0008 (webserver 3 porta 443) - acesso para leitura de logs /opt/ibm/httpserver*/log
+ 
+==================================================================================================================================================================================
+ 
+//DEPLOY JBOSS
+ds7261lx012                                                     - domain                                sspdeapllx0042 (IP 10.116.88.114 porta 9990)
+ 
+==================================================================================================================================================================================
+ 
+AMBIENTE SICLI E PREPILOTO (AMBIENTE 4) - VERSÃO 4.1.3.0:que
+ 
+//INSTÂNCIAS JBOSS
+ds7261lx013: sipan-sicli                                         - sipan04-lx0033 – grupo sipan04        sspdeapllx0033 (IP 10.116.88.90 porta 39004)
+ds7261lx013: sipan-prepiloto                             - sipan05-lx0033 – grupo sipan05        sspdeapllx0033 (IP 10.116.88.90 porta 39005)
+ 
+//PORTAL APLICAÇÃO
+ds7261lx014: sipan-sicli e sipan-prepiloto                       - sspdeapllx0070 (IP 10.116.88.138 portas 9044 e 9045) - executar stop/start com o usuário wpsadmin - igual ao LX200 e 201
+ 
+//PORTAL APRESENTAÇÃO
+sspdeaprlx0002: 10.116.84.119  SICLI                             - sspdeapllx0070 (webserver 4 porta 443) - acesso para leitura de logs /opt/ibm/httpserver*/log
+sspdeaprlx0002: 10.116.84.124  PREPILOTO                         - sspdeapllx0070 (webserver 5 porta 443) - acesso para leitura de logs /opt/ibm/httpserver*/log
+ 
+ 
+ Pessoal,
+
+Segue informações sobre o ambiente pré-piloto.
+
+1.1  Ambiente Websphere Portal
+
+       - Apresentação IHS: 
+       DS7261LX011 – IP 10.0.224.111
+       URL: https://10.0.224.111/wps/portal/sipan
+                        
+            - Portal/DMGR: 
+       DS7261LX014 –IP 10.0.228.60
+       URL DMGR: https://10.0.228.60:9045/ibm/console/
+
+            - Banco de Dados: 
+       DS7261LX015 – IP 10.0.230.36 – Porta 60000 (db2inst2)
+
+1.1.1       Os scripts de stop/start estão em /opt/rc_portal_1.
+
+       1.1.2     Os scripts de deploy e undeploy estão disponíveis em 
+/opt/IBM/WebSphere_1/script_deploy_undeploy.
+
+       1.1.3     O pacote tema deverá ficar em /deploy/sipan para que seja instalado e 
+desinstalado.
+
+1.2  Ambiente Jboss
+
+- Domain: 
+       DS7261LX012 - IP 10.0.228.58 (onde deverá ser executado o comando de deploy 
+(jboss.sh)
+
+            - Node:
+                        DS7261LX013 – IP 10.0.228.59 (onde deverá ser executado o comando de 
+stop/start da instância (jboss.sh)
+            
+       - Grupo: sipan-prepiloto/ Instância: sipan-prepiloto
+
+
+	   
+Rafa,
+ 
+Seguem os passos para deploy do tema e stop/start via linha de comando:
+ 
+ 
+1       Copiar o arquivo de tema para a sua home;
+ 
+ 
+2       Copiar o arquivo de tema da sua home para o diretório /deploy/sipan:
+ 
+        sudo -u wpsadmin cp /tmp/sipan-tema.ear /deploy/sipan/
+ 
+ 
+3       Acessar o diretório onde estão os scripts:
+ 
+        cd /opt/IBM/WebSphere/script_deploy_undeploy
+ 
+ 
+4       Executar os scripts:
+ 
+        sudo -u wpsadmin ./undeploy.sh
+ 
+        sudo -u wpsadmin ./deploy.sh
+ 
+ 
+5       Stop/start do portal via linha de comando:
+ 
+        sudo -u wpsadmin /opt/rc_portal/rc_portal stop
+ 
+        sudo -u wpsadmin /opt/rc_portal/rc_portal start
+ 
+ 
+
+http://172.16.141.94/wps/portal
+http://172.16.141.231:10039/wps/portal
+https://172.16.141.230:9043/ibm/console
+
+PRODUÇÂO
+CD5464SR203 e CD5464SR202.
+
+1.	Informamos que foi solicitada a configuração de regras de firewall em caráter acelerado através da CRQ000000279445.
+2.	Cabe destacar que o acesso não será realizado através das URL negocios.caixa e negocios-piloto.caixa, as quais estarão indisponíveis em 12/10/2017, mas através das URL abaixo:
+2.1.	Portais que atendem ao negocios.caixa:
+DAP7261LX0003	http://10.219.66.65:10039/wps/portal/sipan
+
+DAP7261LX0004	http://10.219.66.66:10039/wps/portal/sipan
+
+DAP7261LX0005	http://10.219.66.67:10039/wps/portal/sipan
+
+DAP7261LX0006	http://10.219.66.68:10039/wps/portal/sipan
+
+DAP7261LX0007	http://10.219.66.69:10039/wps/portal/sipan
+
+DAP7261LX0010	http://10.219.66.151:10039/wps/portal/sipan
+
+DAP7261LX0011	http://10.219.66.152:10039/wps/portal/sipan
+
+DAP7261LX0012	http://10.219.66.153:10039/wps/portal/sipan
+
+
+2.2.	Portais que atendem ao negocios-piloto.caixa:
+DAP7261LX0008	http://10.219.66.63:10039/wps/portal/sipan
+
+DAP7261LX0009	http://10.219.66.64:10039/wps/portal/sipan
+
+
+1.	Informamos que já foi configurada regra de acesso dos servidores da GECAF (CD5464SR203 e CD5464SR202) aos portais dos ambientes Produção e Piloto do Negocios.caixa, acessíveis conforme a mensagem da CEPTISP31 de 11/10/17, abaixo. Esse acesso já foi validado pela GECAF04.
+2.	Essa regra também já provê acesso dos referidos servidores ao grupo Feirão, o qual pode ser acessado a partir das seguintes URL:
+DAP7261LX0003	http://10.219.66.65:10039/wps/portal/feirao
+
+DAP7261LX0004	http://10.219.66.66:10039/wps/portal/feirao
+
+DAP7261LX0005	http://10.219.66.67:10039/wps/portal/feirao
+
+DAP7261LX0006	http://10.219.66.68:10039/wps/portal/feirao
+
+DAP7261LX0007	http://10.219.66.69:10039/wps/portal/feirao
+
+DAP7261LX0010	http://10.219.66.151:10039/wps/portal/feirao
+
+DAP7261LX0011	http://10.219.66.152:10039/wps/portal/feirao
+
+DAP7261LX0012	http://10.219.66.153:10039/wps/portal/feirao
+
+3.	Quanto ao ambiente Pré-piloto, foi solicitada uma nova regra de firewall através da CRQ000000282083, a qual deve estar disponível para testes a partir de 08/11/17. O acesso ao Pré-piloto será realizado através das seguintes URL:
+DAP7261LX0008	http://10.219.66.63:10098/wps/portal/sipan/
+
+DAP7261LX0009	http://10.219.66.64:10098/wps/portal/sipan/
+
+3.1.	Destacamos que a diferença entre as URL de acesso aos portais dos ambientes Piloto e Pré-piloto é apenas a porta: 10039 para o Piloto e 10098 para o Pré-piloto.
+

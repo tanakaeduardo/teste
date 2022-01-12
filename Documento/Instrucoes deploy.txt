@@ -1,0 +1,65 @@
+Ambiente 1
+nacional
+mvn clean install -DskipTests=true 
+
+Ambiente 2
+piloto
+mvn clean install -DskipTests=true -Dpiloto
+
+Ambiente 4
+pre-piloto
+mvn clean install -DskipTests=true -Dpre-piloto
+
+Ambiente 5 - Teste
+piloto_teste
+mvn clean install -DskipTests=true -Dpiloto
+
+Editar o pom.xml com a versao desejada
+Editar o arquivo "copy_ears - piloto.bat" com a versao desejada
+Executar "copy_ears - piloto.bat" no C:\SIPAN\workspace
+
+copiar arquivo "4.62.0_piloto"
+de : c:\Entregas
+para: /tmp/NegociosCaixa/Ambiente5
+Ambiente 10.116.88.114
+
+
+######
+Ambiente 5 - Fazer o undeploy e o deploy
+10.116.84.124
+######
+
+Abrir sesão do Putty
+
+Undeploy , arquivo DeployUndeply.txt
+
+Editar os comandos do deploy com a versão desejada
+Deploy , arquivo DeployUndeply.txt
+
+
+Ambiente 2
+http://negociosihs-piloto.des.caixa:10039/wps/myportal 
+Ambiente1
+https://10.116.84.116/wps/myportal
+Ambiente4
+https://10.116.84.124/wps/myportal/
+https://10.116.84.124/wps/portal/sipan-parametros/Home
+
+Ambiente5
+http://10.116.84.119/wps/myportal/
+http://10.116.84.119/wps/portal/sipan
+http://10.116.84.119/wps/portal/
+
+
+f764574
+Marcos07
+
+c000000 
+c000000
+
+->Administração
+->Módulos da Web
+->procurar "sipan"
+->atualizar modulos da web
+->selecionar arquivo : C:\Entregas\4.4.23.0_piloto\portlets
+

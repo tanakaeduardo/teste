@@ -1,0 +1,213 @@
+AMBIENTE 5
+agora ambiente 4 aponta para sipan04 e 
+ambiente5  aponta para sipan05
+[Portal do Ambiente 5 , SSPDEAPLLX0070 10.116.88.138]
+sudo -u wpsadmin /opt/rc_portal/rc_portal stop
+sudo -u wpsadmin /opt/rc_portal/rc_portal start
+
+[AMBIENTE 5]
+
+ou gera como ambiente 2 e altera o nome usando comando do shell:
+mvn clean install -DskipTests=true -Dpiloto
+rename piloto-ear ear-amb5 /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan*
+rename piloto-ear ear-amb5 /tmp/Negocios.Caixa/4.71.0_piloto/ejb/sipan*
+
+ou
+rename piloto-ear ear-amb5 /tmp/Negocios.Caixa/Ambiente5/4.62.0_amb5/ejb/sipan*
+
+
+
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicli-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicli-ips-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siric-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sipes-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sipnl-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sidon-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sid00-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sid09-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siico-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicpc-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicac-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siran-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sigms-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siper-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-nsgd-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sib24-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicet-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sipgt-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-pessoa-fisica-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-pessoa-juridica-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-gerenciador-atendimento-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-autorizacao-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-agencia-digital-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-trilha-auditoria-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-formulario-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siset-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sidce-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siapx-ear-amb5.ear
+
+
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sicli-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sicli-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sicli-ips-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sicli-ips-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-siric-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-siric-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sipes-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sipes-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sipnl-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sipnl-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sidon-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sidon-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sid00-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sid00-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sid09-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sid09-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-siico-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-siico-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sicpc-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sicpc-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sicac-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sicac-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-siran-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-siran-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sigms-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sigms-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-siper-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-siper-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-nsgd-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-nsgd-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sib24-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sib24-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sicet-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sicet-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sipgt-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sipgt-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-pessoa-fisica-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-pessoa-fisica-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-pessoa-juridica-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-pessoa-juridica-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-gerenciador-atendimento-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-gerenciador-atendimento-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-autorizacao-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-autorizacao-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-agencia-digital-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-agencia-digital-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-trilha-auditoria-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-trilha-auditoria-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-formulario-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-formulario-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-siset-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-siset-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-sidce-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-sidce-ear-amb5.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan05 deploy sipan-integration-siapx-ear.ear /tmp/Negocios.Caixa/Ambiente5/4.71.0_piloto/ejb/sipan-integration-siapx-ear-amb5.ear
+
+AMBIENTE 2
+
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicli-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicli-ips-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siric-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sipes-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sipnl-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sidon-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sid00-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sid09-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siico-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicpc-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicac-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siran-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sigms-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siper-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-nsgd-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sib24-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicet-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sipgt-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-pessoa-fisica-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-pessoa-juridica-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-gerenciador-atendimento-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-autorizacao-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-agencia-digital-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-trilha-auditoria-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-formulario-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siset-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sidce-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siapx-piloto-ear.ear
+
+sipan-formulario-ear
+
+
+
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sicli-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sicli-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sicli-ips-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sicli-ips-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-siric-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-siric-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sipes-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sipes-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sipnl-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sipnl-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sidon-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sidon-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sid00-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sid00-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sid09-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sid09-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-siico-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-siico-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sicpc-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sicpc-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sicac-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sicac-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-siran-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-siran-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sigms-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sigms-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-siper-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-siper-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-nsgd-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-nsgd-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sib24-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sib24-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sicet-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sicet-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sipgt-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sipgt-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-pessoa-fisica-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-pessoa-fisica-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-pessoa-juridica-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-pessoa-juridica-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-gerenciador-atendimento-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-gerenciador-atendimento-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-autorizacao-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-autorizacao-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-agencia-digital-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-agencia-digital-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-trilha-auditoria-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-trilha-auditoria-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-formulario-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-formulario-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-siset-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-siset-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-sidce-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-sidce-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan01 deploy sipan-integration-siapx-ear.ear /tmp/Negocios.Caixa/Ambiente2/4.60.0_piloto/ejb/sipan-integration-siapx-piloto-ear.ear
+
+
+
+
+
+
+
+
+******************************************************************************************************************************************************************************************
+******************************************************************************************************************************************************************************************
+******************************************************************************************************************************************************************************************
+
+AMBIENTE 1
+
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicli-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicli-ips-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siric-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sipes-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sipnl-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sidon-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sid00-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sid09-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siico-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicpc-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicac-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siran-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sigms-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siper-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-nsgd-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sib24-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sicet-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sipgt-pre-piloto-app.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-pessoa-fisica-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-pessoa-juridica-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-gerenciador-atendimento-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-autorizacao-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-agencia-digital-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-trilha-auditoria-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-formulario-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siset-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-sidce-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy sipan-integration-siapx-pre-piloto-ear.ear
+
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sicli-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sicli-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sicli-ips-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sicli-ips-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-siric-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-siric-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sipes-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sipes-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sipnl-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sipnl-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sidon-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sidon-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sid00-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sid00-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sid09-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sid09-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-siico-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-siico-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sicpc-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sicpc-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sicac-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sicac-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-siran-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-siran-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sigms-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sigms-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-siper-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-siper-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-nsgd-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-nsgd-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sib24-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sib24-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sicet-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sicet-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sipgt-app.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sipgt-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-pessoa-fisica-ear.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-pessoa-fisica-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-pessoa-juridica-ear.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-pessoa-juridica-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-gerenciador-atendimento-ear.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-gerenciador-atendimento-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-autorizacao-ear.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-autorizacao-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-agencia-digital-ear.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-agencia-digital-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-trilha-auditoria-ear.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-trilha-auditoria-pre-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-formulario-ear.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-formulario-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-sidce-ear.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-sidce-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-siapx-ear.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-siapx-piloto-ear.ear &&
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh sipan04 deploy sipan-integration-siset-ear.ear /tmp/Negocios.Caixa/Ambiente4/4.61.4_piloto/ejb/sipan-integration-siset-piloto-ear.ear
+

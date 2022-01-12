@@ -1,0 +1,340 @@
+C:\SIPAN\Infra\JBoss\jboss-eap-6.4\standalone\deployments
+
+http://10.116.98.23/CANAIS//sipan/tree/develop/sipan-portal-ibm/sipan-portlets/sipan-cliente-pessoajuridica/src/main/resources/relatorios/aberturaContaPJ/contratoRelacionamento
+
+
+
+Ambiente 1
+https://10.116.84.117/wps/myportal/sipan
+Ambiente 2
+https://10.116.84.116/wps/myportal/sipan
+Ambiente 4 - pre-piloto
+https://10.116.84.124/wps/myportal/sipan
+Ambiente 5
+https://10.116.84.119/wps/myportal/sipan
+http://10.116.84.119/wps/myportal/sipan
+http://10.116.84.119/wps/portal/sipan
+
+us/pwd : c897998
+us/pwd/TB : c897990
+https://10.116.88.138/wps/myportal
+MOs
+http://sismn.caixa/
+
+jar -cfM sipan-cliente-pessoafisica-portlet.war *
+jar -cfM sipan-cliente-pessoajuridica-portlet.war *
+
+
+Dicionario de TAG:
+Catálogo
+http://guardiao.caixa/portalarquitetura/
+
+	
+conta 1288
+
+CTRL + 'R'
+
+LOG Instancia 2
+114
+/opt/jboss/jboss-eap-6.4/domain
+10.116.88.90
+/log_jboss/sipan01-lx0033
+10.116.88.65
+/log_was/sipan/sipan-portlet-cliente-pessoajuridica.log
+Servidor de aplicacao
+10.116.88.65 porta 9044
+
+LOG Instancia 4
+10.116.88.90
+/log_jboss/sipan05-lx0033
+
+LOG Instancia 1
+10.116.88.90
+/log_jboss/sipan02-lx0033
+
+LOG Instancia 5
+10.116.88.90
+/log_jboss/sipan04-lx0033
+
+Log 
+disponiblizar et396
+
+Angela
+f748734
+Pword31
+\\sp7266et028
+
+
+Rafa
+f758126
+Indra12
+
+Tanaka
+f739241
+Tanaka10
+
+\\sp7266et230\Compartilhado
+
+Paulo
+f111111
+xxxxxx
+\\sp7266et211\Compartilhado
+
+
+Marcos Takeo Hirata
+\\SP7266ET1030
+\\10.6.37.42
+f764574
+Marcos06
+
+
+
+Gilberto Oliveira
+c129427@caixa.gov.br
+\\Sp7266et204\cursos
+
+sipan 1 = ambiente 2
+
+CPF: 061.594.899-50
+a senha daquela conta 023 é 2581
+
+
+
+
+mvn clean install -DskipTests=true
+mvn clean install -DskipTests=true -Dpiloto
+mvn clean install -DskipTests=true -Dpre-piloto
+mvn eclipse:clean
+mvn eclipse:eclipse
+import existent project
+
+http://localhost:8080/sipan-cliente-pessoafisica-portlet/jboss_principal.jsf;jsessionid=Q4HuCVuQzE4EPWtwO-+kFONe
+CPF: 421.144.032-20
+CPF: 356.949.394-68
+CPF: 276.792.765-87
+024239684-42 - 8717774
+conta salario: 051.084.238-02
+Cartão ELO: 01571406018
+
+Novo Usuario
+02423968442 
+00496657747 
+00957585691
+
+Cartao:
+63603616634 - ok
+Valor do cartão maior que o limite disponível. - 620,00
+O Valor Limite a ser Contratado deve ser maior que o Limite Mínimo por Variante - 1.500,00
+22211133304 - 
+00167703153 - Ocorreu uma falha SICLI - #F15 +100 CPF NAO LOCALIZADO NO SICLI PARA A CLASSE PRE DEFINIDA E SICPF
+10736089993 - Ocorreu uma falha SICLI - #F15 +100 CPF NAO LOCALIZADO NO SICLI PARA A CLASSE PRE DEFINIDA E SICPF
+47359362113 - Ocorreu uma falha SICLI - #F15 +100 CPF NAO LOCALIZADO NO SICLI PARA A CLASSE PRE DEFINIDA E SICPF
+41125022655 - Ocorreu uma falha SICLI - #F15 +100 CPF NAO LOCALIZADO NO SICLI PARA A CLASSE PRE DEFINIDA E SICPF
+75273112311 - extrato de qualidade - Cpf Com Tipo De Regularidade Diferente De Regular
+24497707393 - extrato de qualidade - Cpf Com Tipo De Regularidade Diferente De Regular
+
+13212082780 - SICAC - (CAC) - ACAO DE VENDA NAO PERMITIDA PARA O SISTEMA DE ENTRADA
+02423968442 - SICAC - (CAC) - ACAO DE VENDA NAO PERMITIDA PARA O SISTEMA DE ENTRADA
+28147896514 - extrato de qualidade - Cliente Com Mais De Um Cocli Para Mesmo Cpf/CNPJ
+33312719348 - extrato de qualidade - Cliente Com Carteira Pv Referencia Inativa
+
+60207027404 - SICAC - (CAC) - VARIANTE NAO ENCONTRADA
+92049168691 –  
+
+vendedor
+00058180010
+
+cartao cnpj
+12.372.207/0001-76
+
+
+
+Conta: 000400005617
+
+Número da conta:000984214506-4
+
+autorizacao zero a esquerda e barra ok
+telefone na abertura de conta
+mensagem erro NSGD: Para contas informadas sem código da Operação/Produto, será realizada consulta no padrão NSGD” e em sequência a mensagem retornada pela interface
+
+
+CNPJ: 60.875.788/0001-01
+03.046.126/0002-76
+00.360.305/0173-41
+00.000.000/0009-49
+12.372.207/0001-76
+ELO
+00.072.838/0001-90
+Vendedor externo
+000.000.001-91
+Criei duas massas contratadas :
+00.072.838/0001-90 - PV 0002
+00.094.914/0001-69 - PV 143
+Conta 006
+95.591.764/0001-050
+Conta Eleitoral
+15.768.171/0001-32
+Cartao Simples
+132.120.827-80
+28825411120
+22321456973
+
+
+c897990
+
+Cartao:
+CNPJ: 30.496.004/0001-73 
+CPF: 132.120.827-80 
+Consignado
+100.200.300-88
+0259
+conta crédito 52528-5
+erro conta nsgd titular procurador
+100.200.300-88
+
+
+
+   <CNPJ>72838000190</CNPJ>
+  <UNIDADE>1431</UNIDADE>
+
+
+00.072.838/0001-90 - PV 1431
+
+
+Banco de Dados
+Usuario: spansd1
+Senha: S3t3mbr0
+<user-name>spansd1</user-name>
+<password>S3t3mbr0</password>
+
+as duas aparecem na aba autorização e vc consegue ver se ta tudo certinho
+
+
+
+
+
+RTC dela é 8018323
+
+HomeAberturaContaMBean.java
+goToPreencherDadosContrato
+preencher_dados_titular.xhtml
+preencherDadostakeoTitularMBean.dadosTitulaBW.enderecoBW.enderecoSimplificado
+preencherDadosTitularMBean.dadosTitulaBW.enderecoBW.enderecoSimplificado
+
+3701 - conta corrente PF
+1288 - conta poupança PF
+3700 - conta salário PF
+3703 e 1292 - conta corrente PJ
+0146 - conta poupança sem fins lucrativos PJ
+3702 - conta poupança com fins lucrativos PJ 
+0020 - conta de alguma coisa do PJ
+0093 - conta de alguma coisa do PJ tb
+
+
+000400005634-3
+
+
+$ mvn clean install -f sipan-integrations/sipan-integration-nsgd/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-nsgd/pom.xml &&mvn jboss-as:deploy -f sipan-integrations/sipan-integration-nsgd/ear/pom.xml -Djboss-as.hostname=127.0.0.1
+
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-nsgd/ear/pom.xml -Djboss-as.hostname=127.0.0.1        && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicac/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicli/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicli-ips/ear/pom.xml -Djboss-as.hostname=127.0.0.1   && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicpc/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sid00/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sid09/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sidon/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sigms/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siico/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siper/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sipes/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sipnl/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siran/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sidda/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siric/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicet/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sib24/ear/pom.xml -Djboss-as.hostname=127.0.0.1       && mvn jboss-as:deploy -f sipan-app/sipan-ejb-autorizacao/ear/pom.xml -Djboss-as.hostname=127.0.0.1                  && mvn jboss-as:deploy -f sipan-app/sipan-ejb-gerenciador-atendimento/ear/pom.xml -Djboss-as.hostname=127.0.0.1      && mvn jboss-as:deploy -f sipan-app/sipan-ejb-pessoa-fisica/ear/pom.xml -Djboss-as.hostname=127.0.0.1                && mvn jboss-as:deploy -f sipan-app/sipan-ejb-pessoa-juridica/ear/pom.xml -Djboss-as.hostname=127.0.0.1              && mvn jboss-as:deploy -f sipan-app/sipan-ejb-agencia-digital/ear/pom.xml -Djboss-as.hostname=127.0.0.1  && mvn jboss-as:deploy -f sipan-app/sipan-ejb-trilha-auditoria/ear/pom.xml -Djboss-as.hostname=127.0.0.1
+
+
+
+
+
+Aqui está o comando maroto pra buscar alguma informação dentro de arquivos .gz dentro do git bash
+find . -name "*.properties" -exec zgrep -l "jasper" \{\} \;
+find . -name "*.gz" -exec zgrep -l "29364" \{\} \;
+find . -name "*.gz" -exec zgrep -l "JDBCAccessLogValve" \{\} \;
+find . -name "*.xml" -exec zgrep -l "com.mysql.jdbc.Driver" \{\} \;
+find . -name "*.gz" -exec zgrep -l "1649569130" \{\} \;
+
+./standalone.bat -c standalone-full_caixa.xml -b 0.0.0.0
+
+
+dentro das aspas coloca a chave da pesquisa
+
+http://10.6.37.133/dokuwiki/doku.php?id=start
+etadashi
+indra1
+
+Documentacao IPPO
+http://cadastro.des.coredf.caixa/institucional/INSPC012.htm
+
+
+PORTAL APLICAÇÃO
+(IP 10.116.88.65 porta 9044) - executar stop/start com o usuário wpsadmin /log_was/sipan
+
+Listar pacotes do jboss
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh list | grep piloto
+
+
+novo svn
+Marcos Takeo Hirata
+git remote -v
+git remote set-url origin  http://f739241@fontes.des.caixa/CANAIS/sipan.git
+
+https://www.mobilefish.com/services/unicode_escape_sequence_converter/unicode_escape_sequence_converter.php
+
+
+criar gerar nova branch a partir do workspace:
+
+git checkout -b feature_4.70.1
+
+***********************************************************************************
+
+
+Angela Junko Kodaira [11:47]: 
+Tanaka, aqui está o comando maroto pra buscar alguma informação dentro de arquivos .gz dentro do git bash
+find . -name "*.gz" -exec zgrep -l "828068103" \{\} \;
+
+find . -name "*.gz" -exec zgrep -l "828068624" \{\} \;
+
+828068624
+
+find . -name "*.gz" -exec zgrep -l "informacoes de titulares da conta/" \{\} \;
+find . -name "*.gz" -exec zgrep -l "BRUGGEMANN" \{\} \;
+find . -name "*.gz" -exec zgrep -l "manutencao_cesta_servicos/alteracao" \{\} \;
+find . -name "*.gz" -exec zgrep -l "335145930000" \{\} \;
+find . -name "*.gz" -exec zgrep -l "Para contas informadas" \{\} \;
+
+**********************************************************
+
+Danilo Meira e Silva
+16:58
+pelo que me lembro, quando o usuário é TB (c897990) o SIPAN envia a proposta de contratação para o SICAC e depois o gerente faz a contratação 
+definitiva na tela de Autorização, não fica armazenado no banco - é realizado uma consulta no serviço SICAC que informa as contratações pendentes
+ da agência. Quando o usuário é gerente (c897998), o SIPAN envia direto ao SICAC a contratação do cartão sem necessidade de confirmar na aba Autorização
+
+ **********************************************************************************
+ 
+ 
+SIAAF.REQ.NEGOCIOS_CAIXA
+JNDI 
+java:jboss/JMS/REQ.NEGOCIOS_CAIXA 
+agora é mq: BRD3 
+brow, fila do araf!
+
+
+mock
+
+c
+standalone
+se no amb1 não estiver com mock, muda pra NACIONAL
+se no amb4 não estiver com mock, muda pra PRE-PILOTO
+
+
+****************************************
+
+o SICLI esta errado em retornar o mesmo <PROXIMO_CAMPO>, mas o tratamento que implementamos esta funcionando
+o erro do portal é que nao esta dando continuidade na consulta
+1) CNPJ_SIISO que retorna o cocli
+2) COCLI_SICF_SIISO com filtros basicos (se retornar paginacao tem que fazer as chamadas e se retornar um codigo igual ao anterior, nao fazemos mais chamadas de paginacao)
+3) COCLI_SICPF_SIISO com restante dos campos (se retornar paginacao tem que fazer as chamadas e se retornar um codigo igual ao anterior, nao fazemos mais chamadas de paginacao)
+4) consulta de socios, administradores e procuradores
+
+************************************
+
+wiki
+
+SP7266ET1041 (Servidor 10.6.32.15) - pedir acesso para duas maquinas para o Denis

@@ -1,0 +1,194 @@
+Start JBoss Local
+cd {JBOSS_HOME}/bin
+(Para subir)
+nohup sh standalone.sh -server-config=standalone-full_caixa.xml &
+ou
+./standalone.sh -server-config=standalone-full_caixa.xml
+
+(Para matar)
+Va em gerenciador de tarefas e mate o "java'
+
+data log tmp - pode-se deletar no jboss, ele é reposto automaticamente sempre...
+
+Ambiente 1 - Nacional
+mvn clean install -DskipTests=true
+https://10.116.84.117/wps/myportal/sipan
+
+Ambiente 2  - piloto
+mvn clean install -DskipTests=true -Dpiloto
+https://10.116.84.116/wps/myportal/sipan
+
+Ambiente 4 - pre-piloto
+mvn clean install -DskipTests=true -Dpre-piloto
+https://10.116.84.124/wps/myportal/sipan
+
+Ambiente 5 - piloto-teste
+mvn clean install -DskipTests=true -Dpre-piloto
+https://10.116.84.119/wps/myportal/sipan
+
+
+
+[URLS da aplicação no Websphere Portal]
+
+Ambiente 1:
+http://10.116.88.137:10039/wps/portal/sipan
+
+Ambiente 2:
+http://10.116.88.65:10039/wps/portal/sipan
+
+Ambiente 3:
+http://10.116.88.65:10039/wps/portal/feirao
+
+Ambiente 4:
+http://10.116.88.138:10098/wps/portal/sipan
+
+Ambiente 5:
+http://10.116.88.138:10039/wps/portal/sipan
+
+mvn eclipse:clean
+mvn eclipse:eclipse
+
+Deploy EJBs
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-nsgd/ear/pom.xml -Djboss-as.hostname=127.0.0.1        &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicac/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicli/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicli-ips/ear/pom.xml -Djboss-as.hostname=127.0.0.1   &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicpc/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sid00/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sid09/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sidon/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sigms/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siico/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siper/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sipes/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sipnl/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siran/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sidda/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sipgt/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siric/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicet/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siset/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sib24/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siapx/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sidce/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-app/sipan-integration-siatr-ejb/ear/pom.xml -Djboss-as.hostname=127.0.0.1			 &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-autorizacao/ear/pom.xml -Djboss-as.hostname=127.0.0.1                  &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-gerenciador-atendimento/ear/pom.xml -Djboss-as.hostname=127.0.0.1      &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-pessoa-fisica/ear/pom.xml -Djboss-as.hostname=127.0.0.1                &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-pessoa-juridica/ear/pom.xml -Djboss-as.hostname=127.0.0.1              &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-agencia-digital/ear/pom.xml -Djboss-as.hostname=127.0.0.1			  &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-trilha-auditoria/ear/pom.xml -Djboss-as.hostname=127.0.0.1			  &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-formulario/ear/pom.xml -Djboss-as.hostname=127.0.0.1						
+
+*************************************
+
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-nsgd/ear/pom.xml -Djboss-as.hostname=127.0.0.1        &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicac/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicli/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicli-ips/ear/pom.xml -Djboss-as.hostname=127.0.0.1   &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicpc/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sid00/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sid09/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sidon/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siico/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siper/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sipes/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sipnl/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siran/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sidda/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sipgt/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siric/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicet/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siset/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sib24/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sidce/ear/pom.xml -Djboss-as.hostname=127.0.0.1       &&
+mvn jboss-as:deploy -f sipan-app/sipan-integration-siatr-ejb/ear/pom.xml -Djboss-as.hostname=127.0.0.1			 &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-autorizacao/ear/pom.xml -Djboss-as.hostname=127.0.0.1                  &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-gerenciador-atendimento/ear/pom.xml -Djboss-as.hostname=127.0.0.1      &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-pessoa-fisica/ear/pom.xml -Djboss-as.hostname=127.0.0.1                &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-pessoa-juridica/ear/pom.xml -Djboss-as.hostname=127.0.0.1              &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-agencia-digital/ear/pom.xml -Djboss-as.hostname=127.0.0.1			  &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-trilha-auditoria/ear/pom.xml -Djboss-as.hostname=127.0.0.1			  &&
+mvn jboss-as:deploy -f sipan-app/sipan-ejb-formulario/ear/pom.xml -Djboss-as.hostname=127.0.0.1						
+	  
+
+
+Portlet PF 
+mvn clean install -f sipan-cliente-pessoafisica/pom.xml -DskipTests=true -Denvironment=jboss jboss-as:deploy   -Djboss-as.username=wpadmin -Djboss-as.password=wpadmin@2015
+mvn clean install -f sipan-cliente-pessoafisica/pom.xml -DskipTests=true
+	
+URL de acesso: 
+http://localhost:8080/sipan-cliente-pessoafisica-portlet/jboss_principal.jsf
+
+Portlet PJ 
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-cliente-pessoajuridica/pom.xml -DskipTests=true -Dpiloto -Denvironment=jboss jboss-as:deploy   -Djboss-as.username=wpadmin -Djboss-as.password=wpadmin@2015
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-cliente-pessoajuridica/pom.xml -DskipTests=true
+
+RELATORIO
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-relatorio/pom.xml -DskipTests=true -Denvironment=jboss jboss-as:deploy   -Djboss-as.username=wpadmin -Djboss-as.password=wpadmin@2015
+
+
+URL de acesso: 
+http://localhost:8080/sipan-cliente-pessoajuridica-portlet/jboss_principal.jsf
+
+Trilha Auditoria
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-trilha-auditoria/pom.xml -DskipTests=true -Denvironment=jboss jboss-as:deploy   -Djboss-as.username=wpadmin -Djboss-as.password=wpadmin@2015 
+&&
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-trilha-auditoria/pom.xml -DskipTests=true
+
+Agencia Digital
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-agencia-digital/pom.xml -DskipTests=true -Denvironment=jboss jboss-as:deploy   -Djboss-as.username=wpadmin -Djboss-as.password=wpadmin@2015 &&
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-agencia-digital/pom.xml -DskipTests=true
+
+File Upload
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-file-upload/pom.xml -DskipTests=true -Denvironment=jboss jboss-as:deploy   -Djboss-as.username=wpadmin -Djboss-as.password=wpadmin@2015 &&
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-file-upload/pom.xml -DskipTests=true
+
+Painel Formulários
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-painel-formularios/pom.xml -DskipTests=true -Denvironment=jboss jboss-as:deploy   -Djboss-as.username=wpadmin -Djboss-as.password=wpadmin@2015 &&
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-painel-formularios/pom.xml -DskipTests=true
+
+Formulario Upload
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-formulario-upload/pom.xml -DskipTests=true -Denvironment=jboss jboss-as:deploy   -Djboss-as.username=wpadmin -Djboss-as.password=wpadmin@2015 &&
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-formulario-upload/pom.xml -DskipTests=true
+
+Autorizacao
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-autorizacao-quadro-valores/pom.xml -DskipTests=true -Denvironment=jboss jboss-as:deploy   -Djboss-as.username=wpadmin -Djboss-as.password=wpadmin@2015 &&
+mvn clean install -f sipan-portal-ibm/sipan-portlets/sipan-autorizacao-quadro-valores/pom.xml -DskipTests=true
+
+
+http://localhost:8080/sipan-autorizacao-quadro-valores-portlet/jboss_principal.jsf
+
+
+INDIVIDUAL
+
+mvn clean install -f sipan-integrations/sipan-integration-nsgd/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-nsgd/pom.xml &&mvn jboss-as:deploy -f sipan-integrations/sipan-integration-nsgd/ear/pom.xml -Djboss-as.hostname=127.0.0.1
+mvn clean install -f sipan-integrations/sipan-integration-sicac/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sicac/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicac/ear/pom.xml -Djboss-as.hostname=127.0.0.1
+mvn clean install -f sipan-integrations/sipan-integration-sicli/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sicli/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicli/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sicli-ips/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sicli-ips/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicli-ips/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sicpc/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sicpc/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicpc/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sid00/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sid00/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sid00/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sid09/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sid09/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sid09/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sidon/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sidon/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sidon/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sigms/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sigms/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sigms/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-siico/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-siico/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siico/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-siper/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-siper/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siper/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sipes/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sipes/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sipes/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sipnl/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sipnl/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sipnl/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-siran/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-siran/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siran/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sipgt/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sipgt/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sipgt/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sidda/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sidda/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sidda/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-siric/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-siric/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siric/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sicet/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sicet/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sicet/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-sib24/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-sib24/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-sib24/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-siset/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-siset/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siset/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-entity/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-entity/pom.xml && mvn jboss-as:deploy -f sipan-entity/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-app/sipan-ejb-autorizacao/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-app/sipan-ejb-autorizacao/pom.xml && mvn jboss-as:deploy -f sipan-app/sipan-ejb-autorizacao/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-app/sipan-ejb-gerenciador-atendimento/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-app/sipan-ejb-gerenciador-atendimento/pom.xml && mvn jboss-as:deploy -f sipan-app/sipan-ejb-gerenciador-atendimento/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-app/sipan-ejb-pessoa-fisica/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-app/sipan-ejb-pessoa-fisica/pom.xml && mvn jboss-as:deploy -f sipan-app/sipan-ejb-pessoa-fisica/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-app/sipan-ejb-pessoa-juridica/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-app/sipan-ejb-pessoa-juridica/pom.xml && mvn jboss-as:deploy -f sipan-app/sipan-ejb-pessoa-juridica/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-app/sipan-ejb-trilha-auditoria/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-app/sipan-ejb-trilha-auditoria/pom.xml && mvn jboss-as:deploy -f sipan-app/sipan-ejb-trilha-auditoria/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-app/sipan-ejb-agencia-digital/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-app/sipan-ejb-agencia-digital/pom.xml && mvn jboss-as:deploy -f sipan-app/sipan-ejb-agencia-digital/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+
+mvn clean install -f sipan-integrations/sipan-integration-siatr/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-siatr/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siatr/ear/pom.xml -Djboss-as.hostname=127.0.0.1 
+mvn clean install -f sipan-integrations/sipan-integration-siapx/pom.xml -DskipTests=true && mvn eclipse:eclipse -f sipan-integrations/sipan-integration-siapx/pom.xml && mvn jboss-as:deploy -f sipan-integrations/sipan-integration-siapx/ear/pom.xml -Djboss-as.hostname=127.0.0.1 

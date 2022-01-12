@@ -1,0 +1,51 @@
+<con:SERVICO_ENTRADA xmlns:con="http://caixa.gov.br/sibar/consulta_conta_sid09">
+	<sib:HEADER xmlns:sib="http://caixa.gov.br/sibar">
+		<VERSAO>2.1</VERSAO>
+		<AUTENTICACAO>AA==</AUTENTICACAO>
+		<USUARIO>c897998</USUARIO>
+		<OPERACAO>CONSULTA_CONTA</OPERACAO>
+		<INDICE>1</INDICE>
+		<SISTEMA_ORIGEM>SIPAN</SISTEMA_ORIGEM>
+		<IDENTIFICADOR_ORIGEM>10.192.230.253</IDENTIFICADOR_ORIGEM>
+		<DATA_HORA>20211209183911</DATA_HORA>
+		<ID_PROCESSO>PROCESSO</ID_PROCESSO>
+	</sib:HEADER>
+	<DADOS>
+		<CONSULTA_CONTA>
+			<SEGMENTO>0</SEGMENTO>
+			<CONTA>
+				<UNIDADE>3</UNIDADE>
+				<OPERACAO>3701</OPERACAO>
+				<NUMERO>400014462</NUMERO>
+				<DV>5</DV>
+			</CONTA>
+			<FLAG_PESQUISA_TITULAR>3</FLAG_PESQUISA_TITULAR>
+		</CONSULTA_CONTA>
+	</DADOS>
+</con:SERVICO_ENTRADA>
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<consultacontasid09:SERVICO_SAIDA xmlns:consultacontasid09="http://caixa.gov.br/sibar/consulta_conta_sid09" xmlns:sibar_base="http://caixa.gov.br/sibar">
+	<sib:HEADER xmlns:sib="http://caixa.gov.br/sibar">
+		<VERSAO>2.1</VERSAO>
+		<AUTENTICACAO>AA==</AUTENTICACAO>
+		<USUARIO>c897998</USUARIO>
+		<OPERACAO>CONSULTA_CONTA</OPERACAO>
+		<INDICE>1</INDICE>
+		<SISTEMA_ORIGEM>SIPAN</SISTEMA_ORIGEM>
+		<IDENTIFICADOR_ORIGEM>10.192.230.253</IDENTIFICADOR_ORIGEM>
+		<DATA_HORA>20211209183911</DATA_HORA>
+		<ID_PROCESSO>PROCESSO</ID_PROCESSO>
+	</sib:HEADER>
+	<COD_RETORNO>X5</COD_RETORNO>
+	<ORIGEM_RETORNO>BROKER-SPD7CJC0</ORIGEM_RETORNO>
+	<MSG_RETORNO>(BK76) ERRO NA FORMATACAO DA MENSAGEM.</MSG_RETORNO>
+	<DADOS>
+		<EXCECAO>EXCECAO NO BAR_CONSULTA_CONTA_SID09_MQ.MQInput. DETALHES: ParserException(1) - Funcao: ImbRootParser::parseNextItem, Texto Excecao: Exception whilst
+		parsing.ParserException(2) - Funcao: ImbXMLNSCParser::parseLastChild, Texto Excecao: XML Parsing Errors have occurred.ParserException(3) - 
+		Funcao: ImbXMLNSCDocHandler::handleParseErrors, Texto Excecao: A schema validation error has occurred while parsing the XML document, Texto de Insercao(1)
+		- 6010, Texto de Insercao(2) - 1, Texto de Insercao(3) - 1, Texto de Insercao(4) - 601, Texto de Insercao(5) - cvc-totalDigits-valid: The value &quot;3701&quot;
+		has &quot;4&quot; digits which is not valid with respect to the totalDigits facet with value &quot;3&quot; for type &quot;#Anonymous&quot;., Texto de Insercao(6) - 
+		/Root/XMLNSC/{http://caixa.gov.br/sibar/consulta_conta_sid09}:SERVICO_ENTRADA/DADOS/CONSULTA_CONTA/CONTA/OPERACAO.</EXCECAO>
+	</DADOS>
+</consultacontasid09:SERVICO_SAIDA>

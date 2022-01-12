@@ -1,0 +1,53 @@
+http://localhost:8080/sipan-cliente-pessoafisica-portlet/jboss_principal.jsf;jsessionid=Q4HuCVuQzE4EPWtwO-+kFONe
+
+http://localhost:8080/sipan-cliente-pessoajuridica-portlet/jboss_principal.jsf;jsessionid=Q4HuCVuQzE4EPWtwO-+kFONe
+
+https://10.116.84.116/wps/portal/sipan/!ut/p/a0/04_Sj9CPykssy0xPLMnMz0vMAfIj83Kt8jNTrMoLivV88tMz8_QLsh0VAVTAxWw!/
+
+https://10.116.84.116/wps/portal/sipan-parametros/
+
+https://servicos.caixa/arsys/shared/login.jsp?/arsys/forms/arsapp-user/SRS%3AServiceRequestConsole/Default+Administrator+View/?cacheid=c37f764b
+
+https://portalsoa.caixa/#/principal
+
+http://fontes.des.caixa/CANAIS/sipan
+
+https://gid.caixa:9443/ccm/auth/authrequired#action=com.ibm.team.dashboard.viewDashboard
+
+http://10.6.32.15:8080/dokuwiki/doku.php?id=start
+
+Ambiente 1
+https://10.116.84.117/wps/myportal/sipan
+Ambiente 2
+https://10.116.84.116/wps/myportal/sipan
+Ambiente 4 - pre-piloto
+https://10.116.84.124/wps/myportal/sipan
+Ambiente 5
+https://10.116.84.119/wps/myportal/sipan
+http://10.116.84.119/wps/myportal/sipan
+http://10.116.84.119/wps/portal/sipan
+
+
+c897998
+
+132.120.827-80
+103.753.207-41
+024.239.684-42
+183.557.998-10
+946.301.196-04
+
+334.041.600-10
+000.311.348-58
+015.970.690-43
+288.254.111-20
+
+00.799.205/0001-89
+60.875.788/0001-01
+12.372.207/0001-76
+03.795.488/0002-60
+00.000.884/0001-84
+37.954.880/0026-0
+00.121.564/0001-82
+47.310.651/0001-41
+
+02.721.580/0001-31

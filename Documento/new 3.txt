@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RepresentantesFichaAberturaAutografosPJ" language="groovy" pageWidth="391" pageHeight="842" columnWidth="391" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="7a00518e-9cab-42b3-8640-d6f173b15626">
+	<property name="ireport.zoom" value="1.6105100000000154"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="83"/>
+	<field name="orgaoEmissor" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="dtTerminoMandato" class="java.util.Date"/>
+	<field name="endereco" class="java.lang.String"/>
+	<field name="cidade" class="java.lang.String"/>
+	<field name="uf" class="java.lang.String"/>
+	<field name="cepFormatado" class="java.lang.String"/>
+	<field name="telefone" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="assinatura" class="java.lang.String"/>
+	<field name="dtCadastramento" class="java.util.Date"/>
+	<field name="tipoIdentidade" class="java.lang.String"/>
+	<field name="numeroIdentidade" class="java.lang.String"/>
+	<field name="ufIdentidade" class="java.lang.String"/>
+	<field name="dtEmissao" class="java.util.Date"/>
+	<field name="cpf" class="java.lang.String"/>
+	<field name="estadoCivil" class="java.lang.String"/>
+	<field name="sexo" class="java.lang.String"/>
+	<field name="nacionalidade" class="java.lang.String"/>
+	<field name="dtNascimento" class="java.util.Date"/>
+	<field name="localNascimento" class="java.lang.String"/>
+	<field name="profissao" class="java.lang.String"/>
+	<field name="codOcupacao" class="java.lang.String"/>
+	<field name="local" class="java.lang.String"/>
+	<field name="prefixo" class="java.lang.String"/>
+	<field name="nomeMae" class="java.lang.String"/>
+	<field name="nomePai" class="java.lang.String"/>
+	<field name="tipoMovConta" class="java.lang.String"/>
+	<field name="pais" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="43" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="0" width="153" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPRESENTANTE LEGAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="15" width="391" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nome completo por extenso]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="29" width="391" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="63" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="304" y="5" width="87" height="28">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Data Término Mandato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="36" y="49" width="216" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[C – Em Conjunto     I – Isolada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="7" y="5" width="110" height="16">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tipo de Mov Conta]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="7" y="21" width="24" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoMovConta}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="304" y="33" width="87" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dtTerminoMandato}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="36" y="21" width="216" height="28">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[O – Indica os poderes do representante
+       no campo “observação”.]]></text>
+			</staticText>
+		</band>
+		<band height="58" splitType="Prevent">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="44" width="391" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{endereco}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="6" width="340" height="16">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENDEREÇO / ENDEREÇO ELETRÔNICO / TELEFONE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="30" width="391" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Logradouro e bairro]]></text>
+			</staticText>
+		</band>
+		<band height="31" splitType="Prevent">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="230" y="17" width="65" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cepFormatado}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="199" y="17" width="31" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uf}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="296" y="17" width="95" height="14" isPrintWhenDetailOverflows="true">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="122" y="17" width="77" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pais}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="296" y="3" width="95" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[DDD/Telefone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="230" y="3" width="65" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CEP]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="17" width="122" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cidade}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="122" y="3" width="77" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[País]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="199" y="3" width="31" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[UF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="3" width="122" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cidade]]></text>
+			</staticText>
+		</band>
+		<band height="31" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="3" width="391" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="17" width="391" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="31" splitType="Prevent">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="17" width="176" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{assinatura}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="176" y="17" width="215" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dtCadastramento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="3" width="176" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Assinatura Eletrônica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="176" y="3" width="215" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data do cadastramento]]></text>
+			</staticText>
+		</band>
+		<band height="66" splitType="Prevent">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="281" y="52" width="109" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numeroIdentidade}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="34" y="21" width="136" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1 - Carteira de identidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="34" y="35" width="118" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3 - Identidade Militar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="29" width="31" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="6" width="309" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOCUMENTO DE IDENTIFICAÇÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="34" y="49" width="175" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[5 - CNH     6 - CIE    7 - Outro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="170" y="21" width="119" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2 - Carteira funcional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="170" y="35" width="110" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[4 – Passaporte Bras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="281" y="39" width="109" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nº do documento]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="43" width="31" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoIdentidade}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="32" splitType="Prevent">
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="281" y="18" width="31" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="18" width="105" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orgaoEmissor} + "/" + $F{ufIdentidade}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="281" y="4" width="31" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Sexo]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="185" y="18" width="90" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="315" y="18" width="75" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2 – Masculino]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="105" y="4" width="80" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Data emissão]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="315" y="4" width="70" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1 - Feminino]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="4" width="105" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Órgão emissor/UF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="185" y="4" width="90" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="105" y="18" width="80" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dtEmissao}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="31" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="48" y="17" width="92" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[3 - União Estável]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="48" y="3" width="92" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1 - Solteiro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="291" y="17" width="81" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2 - Estrangeira]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="150" y="17" width="67" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[4 - Outros]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="291" y="3" width="80" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1 - Brasileira]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="150" y="3" width="67" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[2 - Casado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="253" y="3" width="31" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nac.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="3" width="40" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[E.Civil]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="17" width="40" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estadoCivil}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="253" y="17" width="31" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nacionalidade}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="31" splitType="Prevent">
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="17" width="146" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dtNascimento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="146" y="3" width="245" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Local de nascimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="3" width="134" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Data de nascimento]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="146" y="17" width="245" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{localNascimento}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="31" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="3" width="281" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Profissão]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="281" y="3" width="110" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Código ocupação]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="281" y="17" width="110" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codOcupacao}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="17" width="281" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{profissao}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="45" splitType="Prevent">
+			<textField>
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="31" width="391" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["".equals($F{nomePai}) && !"".equals($F{nomeMae}) ? "" : $F{nomeMae}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="3" width="391" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Filiação]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="17" width="391" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box leftPadding="4">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["".equals($F{nomePai}) && !"".equals($F{nomeMae}) ? $F{nomeMae} : $F{nomePai}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="39" splitType="Prevent">
+			<line>
+				<reportElement uuid="1ec6e191-1945-4600-a5dc-f4a6b32f63c8" x="241" y="23" width="81" height="1"/>
+			</line>
+			<textField>
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="241" y="8" width="81" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MMMM", new Locale("pt", "BR")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="353" y="8" width="38" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy").format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="327" y="9" width="26" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="0" y="8" width="171" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{local}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="606c3da6-d28a-4d67-b241-adb18987f0de" x="187" y="8" width="23" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd").format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="25" width="103" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Local/Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="174" y="9" width="9" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="327" y="9" width="26" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1ec6e191-1945-4600-a5dc-f4a6b32f63c8" x="187" y="23" width="23" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="1ec6e191-1945-4600-a5dc-f4a6b32f63c8" x="0" y="23" width="171" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="1ec6e191-1945-4600-a5dc-f4a6b32f63c8" x="353" y="23" width="38" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="215" y="9" width="26" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[de]]></text>
+			</staticText>
+		</band>
+		<band height="48" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="201" y="34" width="190" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Assinatura do Representante Legal]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1ec6e191-1945-4600-a5dc-f4a6b32f63c8" x="201" y="33" width="190" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="34" width="190" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Assinatura do Representante Legal]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1ec6e191-1945-4600-a5dc-f4a6b32f63c8" x="0" y="33" width="190" height="1"/>
+			</line>
+		</band>
+		<band height="48" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="34" width="190" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Assinatura do Procurador]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1ec6e191-1945-4600-a5dc-f4a6b32f63c8" x="0" y="33" width="190" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="201" y="34" width="190" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Assinatura do Procurador]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1ec6e191-1945-4600-a5dc-f4a6b32f63c8" x="201" y="33" width="190" height="1"/>
+			</line>
+		</band>
+		<band height="57" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="0" y="31" width="190" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Assinatura sob carimbo do Caixa]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1ec6e191-1945-4600-a5dc-f4a6b32f63c8" x="0" y="30" width="190" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="d91f04a4-a133-4fc9-af42-27c45cfe9973" x="201" y="31" width="200" height="14">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Arial" size="12" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Assinatura sob carimbo do Gerente]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1ec6e191-1945-4600-a5dc-f4a6b32f63c8" x="201" y="30" width="190" height="1"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
